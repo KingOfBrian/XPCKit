@@ -27,6 +27,7 @@ int main(int argc, const char *argv[])
 		[connection _sendLog:@"Multiply received a connection"];
 		[connection setEventHandler:^(NSDictionary *message, XPCConnection *connection){
 			[connection _sendLog:[NSString stringWithFormat:@"Multiply received a message! %@", message]];
+            [XPCProxy handleInvocationOfProxyMessage:message fromConnection:connection];
 			if([[message objectForKey:@"operation"] isEqual:@"multiply"]){
 				NSArray *values = [message objectForKey:@"values"];
 

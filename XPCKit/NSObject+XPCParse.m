@@ -45,6 +45,7 @@
 	}else if(type == XPC_TYPE_NULL){
 		object = [NSNull null];
 	}
+    
     return object;
 }
 

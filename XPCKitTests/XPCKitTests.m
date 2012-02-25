@@ -92,6 +92,20 @@
 	[self testEqualityOfXPCRoundtripForObject:[XPCUUID uuid]];
 }
 
+-(void)testProxyInvocation
+{
+    NSDictionary *methodDefinition = [NSDictionary dictionaryWithObjectsAndKeys:
+                                      [NSArray arrayWithObjects:@"NSFileManager", @"defaultManager", nil], @"lookupByKeypath",
+                                      [NSDictionary dictionaryWithObjectsAndKeys:
+                                       [NSArray arrayWithObjects:@"/tmp/foo", @"/tmp/foo1", [NSNull null], nil], @"arguments",
+                                       @"copyItemAtPath:toPath:error:", @"selector",
+                                       nil], @"invocation",
+                                      nil];
+
+    id value = [XPCProxy invokeProxyDictionary:methodDefinition];
+
+}
+
 -(void)testEqualityOfXPCRoundtripForObject:(id)object{
 	STAssertNotNil(object, @"Source object is nil");
 	

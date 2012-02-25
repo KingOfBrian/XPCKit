@@ -84,11 +84,10 @@
 		1EF4D9E3141C38D0007BEEC0 /* NSFileHandle+XPCParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4D9E0141C38D0007BEEC0 /* NSFileHandle+XPCParse.m */; };
 		1EF4D9E4141C38D0007BEEC0 /* NSFileHandle+XPCParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 1EF4D9E0141C38D0007BEEC0 /* NSFileHandle+XPCParse.m */; };
 		1EF4D9E7141C3EEE007BEEC0 /* TestService.entitlements in Resources */ = {isa = PBXBuildFile; fileRef = 1EF4D9E6141C3EEE007BEEC0 /* TestService.entitlements */; };
-		9CB818BA14BE64A500A2D29C /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD03D13DD485400D5AEC3 /* SenTestingKit.framework */; };
-		9CB818BB14BE64A500A2D29C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD0EB13DEA0A400D5AEC3 /* Cocoa.framework */; };
-		9CB818C514BE64A500A2D29C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9CB818C314BE64A500A2D29C /* InfoPlist.strings */; };
-		9CB818C814BE64A500A2D29C /* XPCKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB818C714BE64A500A2D29C /* XPCKitTests.m */; };
-		9CB818CD14BE65BE00A2D29C /* libXPCKit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EEDD02813DD485400D5AEC3 /* libXPCKit.a */; };
+		86281F6714F96FC800F44FBD /* XPCProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 86281F6514F96FC800F44FBD /* XPCProxy.h */; };
+		86281F6814F96FC800F44FBD /* XPCProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 86281F6514F96FC800F44FBD /* XPCProxy.h */; };
+		86281F6914F96FC800F44FBD /* XPCProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86281F6614F96FC800F44FBD /* XPCProxy.m */; };
+		86281F6A14F96FC800F44FBD /* XPCProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 86281F6614F96FC800F44FBD /* XPCProxy.m */; };
 		9CB818D214BE685400A2D29C /* NSNull+XPCParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB818D014BE685400A2D29C /* NSNull+XPCParse.h */; };
 		9CB818D314BE685400A2D29C /* NSNull+XPCParse.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CB818D014BE685400A2D29C /* NSNull+XPCParse.h */; };
 		9CB818D414BE685400A2D29C /* NSNull+XPCParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 9CB818D114BE685400A2D29C /* NSNull+XPCParse.m */; };
@@ -208,15 +207,8 @@
 		1EF4D9E0141C38D0007BEEC0 /* NSFileHandle+XPCParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFileHandle+XPCParse.m"; sourceTree = "<group>"; };
 		1EF4D9E5141C3EA2007BEEC0 /* TestApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TestApp.entitlements; sourceTree = "<group>"; };
 		1EF4D9E6141C3EEE007BEEC0 /* TestService.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = TestService.entitlements; sourceTree = "<group>"; };
-		9CB818B914BE64A500A2D29C /* XPCKitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = XPCKitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CB818BD14BE64A500A2D29C /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		9CB818BE14BE64A500A2D29C /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		9CB818BF14BE64A500A2D29C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		9CB818C214BE64A500A2D29C /* XPCKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "XPCKitTests-Info.plist"; sourceTree = "<group>"; };
-		9CB818C414BE64A500A2D29C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		9CB818C614BE64A500A2D29C /* XPCKitTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XPCKitTests.h; sourceTree = "<group>"; };
-		9CB818C714BE64A500A2D29C /* XPCKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XPCKitTests.m; sourceTree = "<group>"; };
-		9CB818C914BE64A500A2D29C /* XPCKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "XPCKitTests-Prefix.pch"; sourceTree = "<group>"; };
+		86281F6514F96FC800F44FBD /* XPCProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPCProxy.h; sourceTree = "<group>"; };
+		86281F6614F96FC800F44FBD /* XPCProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPCProxy.m; sourceTree = "<group>"; };
 		9CB818D014BE685400A2D29C /* NSNull+XPCParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSNull+XPCParse.h"; sourceTree = "<group>"; };
 		9CB818D114BE685400A2D29C /* NSNull+XPCParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSNull+XPCParse.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -317,6 +309,8 @@
 				1EEDD08713DD508C00D5AEC3 /* XPCConnection.m */,
 				1E5F84A613E10DB700234F31 /* XPCService.h */,
 				1E5F84A713E10DB700234F31 /* XPCService.m */,
+				86281F6514F96FC800F44FBD /* XPCProxy.h */,
+				86281F6614F96FC800F44FBD /* XPCProxy.m */,
 				1EEDD0EF13DEB96F00D5AEC3 /* XPCUUID.h */,
 				1EEDD0F013DEB97000D5AEC3 /* XPCUUID.m */,
 			);
@@ -443,6 +437,7 @@
 				1EF4D9E2141C38D0007BEEC0 /* NSFileHandle+XPCParse.h in Headers */,
 				1EB022A6141D9F3700BCC1FB /* NSDate+XPCParse.h in Headers */,
 				9CB818D314BE685400A2D29C /* NSNull+XPCParse.h in Headers */,
+				86281F6814F96FC800F44FBD /* XPCProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +460,7 @@
 				1EEDD0F113DEB97000D5AEC3 /* XPCUUID.h in Headers */,
 				1EB022A5141D9F3700BCC1FB /* NSDate+XPCParse.h in Headers */,
 				9CB818D214BE685400A2D29C /* NSNull+XPCParse.h in Headers */,
+				86281F6714F96FC800F44FBD /* XPCProxy.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +566,7 @@
 		1EEDD01F13DD485400D5AEC3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0420;
 				ORGANIZATIONNAME = Mustacheware;
 			};
 			buildConfigurationList = 1EEDD02213DD485400D5AEC3 /* Build configuration list for PBXProject "XPCKit" */;
@@ -666,6 +663,7 @@
 				1EF4D9E4141C38D0007BEEC0 /* NSFileHandle+XPCParse.m in Sources */,
 				1EB022A8141D9F3700BCC1FB /* NSDate+XPCParse.m in Sources */,
 				9CB818D514BE685400A2D29C /* NSNull+XPCParse.m in Sources */,
+				86281F6A14F96FC800F44FBD /* XPCProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -713,6 +711,7 @@
 				1EF4D9E3141C38D0007BEEC0 /* NSFileHandle+XPCParse.m in Sources */,
 				1EB022A7141D9F3700BCC1FB /* NSDate+XPCParse.m in Sources */,
 				9CB818D414BE685400A2D29C /* NSNull+XPCParse.m in Sources */,
+				86281F6914F96FC800F44FBD /* XPCProxy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -892,7 +891,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TestApp/TestApp.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
 				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";
@@ -906,7 +904,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_ENTITLEMENTS = TestApp/TestApp.entitlements;
-				CODE_SIGN_IDENTITY = "3rd Party Mac Developer Application";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TestApp/TestApp-Prefix.pch";
 				INFOPLIST_FILE = "TestApp/TestApp-Info.plist";

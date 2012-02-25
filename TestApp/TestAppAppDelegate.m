@@ -80,6 +80,12 @@
 	[readConnection sendMessage:readData];
 	
 	[mathConnection sendMessage:[NSDictionary dictionaryWithObject:@"whatTimeIsIt" forKey:@"operation"]];
+    
+    id fm = [XPCProxy proxyClass:@"NSFileManager" selector:@selector(defaultManager) onConnection:mathConnection];
+    
+    [(NSFileManager *)fm copyItemAtPath:@"/tmp/foo" 
+                                 toPath:@"/tmp/bar" 
+                                  error:nil];
 }
 
 @end
